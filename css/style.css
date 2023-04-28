@@ -1,0 +1,1286 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
+/* body {
+  font-family: 'Raleway', sans-serif;
+} */
+
+
+/*TODO: NAVIGATION BAR */
+
+.flexMain {
+  display: flex;
+  align-items: center
+}
+.flex1 {
+  flex: 1
+}
+.flex2 {
+  flex: 2
+}
+.flex3 {
+  flex: 3
+}
+button.siteLink {
+  margin-left: -5px;
+  border: none;
+  padding: 24px;
+  display: inline-block;
+  min-width: 115px;
+}
+.whiteLink {
+  background: #fff;
+}
+.whiteLink:active {
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  color: #fff;
+}
+.blackLink {
+  color: #fff;
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  transition: all 300ms linear;
+}
+.blackLink:active {
+  color: #000;
+  background: #fff
+}
+#siteBrand {
+  width: 30%;
+}
+#menuDrawer {
+  background: #fff;
+  position: fixed;
+  height: 100vh;
+  overflow: auto;
+  z-index: 12312;
+  top: 0;
+  left: 0;
+  border-right: 1px solid #eaeaea;
+  min-width: 25%;
+  max-width: 320px;
+  width: 100%;
+  transform: translateX(-100%);
+  transition: transform 200ms linear;
+}
+#mainNavigation {
+  transition: transform 200ms linear;
+  background: #fff;
+}
+.drawMenu>#menuDrawer {
+  transform: translateX(0%);
+}
+.drawMenu>#mainNavigation {
+  transform: translateX(25%);
+}
+.fa-times {
+  cursor: pointer
+}
+a.nav-menu-item:hover {
+  margin-left: 2px;
+  border-left: 10px solid orange;
+}
+a.nav-menu-item {
+  transition: border 200ms linear;
+  text-decoration: none;
+  display: block;
+  padding: 18px;
+  padding-left: 32px;
+  border-bottom: 1px solid #eaeaea;
+  font-weight: bold;
+  color: #343434
+}
+select.noStyle {
+  border: none;
+  outline: none;
+}
+
+/*TODO: END OF NAVIGATION BAR */
+
+/* TODO: BANNER */
+
+.banner {
+  background: url("https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")center center/cover no-repeat;
+  height: fit-content;
+  padding: 35vmin 0 15vmin 0;
+}
+@media screen and (max-width: 576px) {
+  .banner{
+    padding: 30vmin 0 12vmin 0;
+  }
+}
+.banner h1 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 7vmin;
+  font-weight:bold;
+  background-color: rgba(187, 3, 249, 0.7);
+  padding: 3vmin;
+  border-radius: 8px;
+  box-shadow: 0px 1px 1px rgb(33, 32, 32);
+  width: fit-content;
+  color: white;
+  -webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@-webkit-keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 992px) {
+  .banner h1 {
+    margin-top: 13vmin;
+  }
+}
+@media screen and (max-width: 768px) {
+  .banner h1 {
+    margin-top: 0vmin;
+  }
+}
+@media screen and (max-width: 576px) {
+  .banner h1 {
+    font-size: 10vmin;
+  }
+}
+.banner p {
+  color: whitesmoke;
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  margin-top: 3vmin;
+  font-weight: 500;
+  background-color: rgba(187, 3, 249, 0.7);
+  padding: 3vmin;
+  border-radius: 8px;
+  box-shadow: 0px 1px 1px rgb(33, 32, 32);
+  -webkit-animation: scale-in-centers 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: scale-in-centers 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@-webkit-keyframes scale-in-centers {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes scale-in-centers {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.bannerButton {
+  gap: 5vmin;
+  margin-top: 3vmin;
+}
+.bannerButton button {
+  padding: 0.6em 1em;
+  border: 4px solid white;
+  transition: ease-in-out 0.3s;
+  background-color: transparent;
+  color: white;
+  font-weight: bolder;
+  font-size: 18px;
+  box-shadow: 0px 1px 1px rgb(168, 40, 185);
+  animation: bannerButton 3s ease 2s infinite normal forwards;
+}
+.bannerButton button:hover {
+  transform: scale(1.1) rotate(10deg);
+  background-color: orange;
+  color: white;
+}
+@keyframes bannerButton {
+	0% {
+		animation-timing-function: ease-out;
+		transform: scale(1);
+		transform-origin: center center;
+	}
+
+	10% {
+		animation-timing-function: ease-in;
+		transform: scale(0.91);
+	}
+
+	17% {
+		animation-timing-function: ease-out;
+		transform: scale(0.98);
+	}
+
+	33% {
+		animation-timing-function: ease-in;
+		transform: scale(0.87);
+	}
+
+	45% {
+		animation-timing-function: ease-out;
+		transform: scale(1);
+	}
+}
+
+
+/* TODO: BANNER */
+
+/* TODO: TYPE OF WEBSITE */
+
+.type {
+  margin-top: 70px;
+}
+.type .typeHead h1 {
+  font-size: 35px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+}
+@media screen and (max-width: 576px) {
+  .type .typeHead h1 {
+    font-size: 25px;
+  }
+}
+.type .typeHead p {
+  font-size: 16px;
+  width: 80vmin;
+  color:black;
+  line-height: 20px;
+  font-weight: 500;
+}
+.type .typeBody {
+  width: 1110px;
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  color: white;
+  padding: 3vmin;
+  border-radius: 20px;
+}
+@media screen and (max-width: 580px) {
+  .type .typeBody {
+    width: fit-content;
+    margin: 0 2vmin 0 2vmin;
+  }
+}
+.typeBody h5 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+}
+.typeBody p {
+  font-size: 16px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  padding: 0 5vmin 0 5vmin;
+  line-height: 20px;
+}
+.typeBody button {
+  padding: 1.5vmin;
+  background: orange;
+  color: whitesmoke;
+  font-weight: bold;
+  font-family: 'Raleway', sans-serif;
+  border-radius: 10px;
+  margin-top: 2vmin;
+  border: none;
+  box-shadow: 1px 1px 1px 1px gainsboro;
+  margin-bottom: 2vmin;
+}
+.typeBody img {
+  width: 150px;
+}
+.typeBody .img {
+  padding: 1.5vmin;
+  border-radius: 50%;
+  box-shadow: 0px 1px 1px gainsboro;
+  margin: 2vmin 0 4vmin 0;
+  animation: myAnim 3s ease 0s infinite normal forwards;
+}
+@keyframes myAnim {
+	0%,
+	100% {
+		transform: translateX(0%);
+		transform-origin: 50% 50%;
+	}
+
+	15% {
+		transform: translateX(-30px) rotate(6deg);
+	}
+
+	30% {
+		transform: translateX(15px) rotate(-6deg);
+	}
+
+	45% {
+		transform: translateX(-15px) rotate(3.6deg);
+	}
+
+	60% {
+		transform: translateX(9px) rotate(-2.4deg);
+	}
+
+	75% {
+		transform: translateX(-6px) rotate(1.2deg);
+	}
+}
+.typeBorder {
+  border-right: 0.1vmin solid white;
+}
+@media screen and (max-width: 992px) {
+  .typeBorder {
+    border: none;
+  }
+}
+
+/* End of type of website */
+
+/* Technologies I use */
+
+.tech {
+  margin-top: 25vmin;
+  margin-bottom: 2vmin;
+}
+.tech h1{
+  font-size: 35px;
+  font-weight: bold;
+}
+@media screen and (max-width:576px) {
+  .tech h1{
+    font-size: 25px;
+  }
+}
+.tech img {
+  width: 80px;
+  transition: 0.5s;
+}
+.tech img:hover {
+  transform: scale(1.30);
+}
+
+/* Technologies I use */
+
+/* Comments */
+
+.comment {
+  background-color: #EEF2F6;
+  margin-top: 70px;
+}
+.comment h1 {
+  font-size: 35px;
+  font-weight: bold;
+  padding: 50px 0 40px 0;
+}
+@media screen and (max-width:576px) {
+  .comment h1{
+    font-size: 25px;
+  }
+}
+.commentBox {
+  background-color: white;
+  padding: 5vmin;
+  border-radius: 20px;
+  box-shadow: 0 1px 1px rgb(160, 155, 155);
+  margin-bottom: 60px;
+}
+.commentBox img{
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  box-shadow: 0 1px 1px black;
+}
+.commentBox h6 {
+  font-size: 18px;
+  font-weight: 600;
+}
+.commentBox p {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* Comments */
+
+/* Project */
+
+.project{
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+}
+.project h1 {
+  font-size: 35px;
+  font-weight: bold;
+  padding: 90px 0 50px 0;
+}
+@media screen and (max-width:576px) {
+  .project h1{
+    font-size: 25px;
+  }
+}
+#workProject {
+  width: 500px;
+  border-radius: 20px;
+  box-shadow: 0 2px 2px black;
+}
+@media screen and (max-width:768px) {
+  #workProject  {
+    width: 80vmin;
+  }
+}
+.project .projectViewButton  {
+  margin-top: 10vmin;
+  padding: 10px;
+  background-color: orange;
+  color: whitesmoke;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 10px;
+  margin-bottom: 50px;
+  border: none;
+  box-shadow: 0 1px 2px gainsboro;
+}
+.project .overlayProject {
+  opacity: 0;
+  transform: translate(0px, 100px);
+  transition: 0.5s;
+}
+.project .overlayProject:hover {
+  opacity: 1;
+  transform: translate(0px, 0px);
+}
+.project .overlayButton {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: orange;
+  color: whitesmoke;
+  font-weight: bold;
+  box-shadow: 0 1px 2px gainsboro;
+}
+.imgBot {
+  box-shadow: 0px 0px 0px black;
+}
+
+/* End of Projects */
+
+/* Posts and Announcement */
+
+.posts h1 {
+  font-size: 35px;
+  font-weight: bold;
+  padding: 70px 0 50px 0;
+}
+@media screen and (max-width:576px) {
+  .posts h1{
+    font-size: 25px;
+  }
+}
+.posts img {
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 1px 1px rgb(152, 149, 149);
+}
+@media screen and (max-width:400px) {
+  .posts img {
+    width: 80vmin;
+  }
+}
+.posts h6 {
+  font-size: 18px;
+  font-weight: 700;
+}
+.posts .buttonRead {
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  font-weight: 700;
+  color: orange;
+}
+.posts .postViewButton  {
+  margin-top: 5vmin;
+  padding: 10px;
+  background-color: orange;
+  color: whitesmoke;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 10px;
+  margin-bottom: 50px;
+  border: none;
+  box-shadow: 0px 1px 2px gainsboro;
+}
+
+/* Post page */
+
+
+.postPage #row1 #col1 img {
+  width: 480px;
+  box-shadow: 0px 2px 2px gainsboro;
+}
+.postPage #row1 #col1 h1 {
+  font-size: 25px;
+  padding: 10px 10px 0px 0px;
+  font-weight: 700;
+}
+@media screen and (max-width:1200px) {
+  .postPage #row1 #col1 h1{
+    width: 480px;
+    font-size: 25px;
+  }
+}
+@media screen and (max-width:500px) {
+  .postPage #row1 #col1 h1, .postPage #row1 #col1 img{
+    width: 380px;
+    font-size: 20px;
+  }
+}
+@media screen and (max-width:400px) {
+  .postPage #row1 #col1 h1, .postPage #row1 #col1 img{
+    width: 320px;
+  }
+}
+.postPage #row1 #col1 p {
+  font-size: 16px;
+  margin-bottom: 0px;
+}
+.postPage #col2 h1 {
+  font-weight: 700;
+}
+.postPage #col2 p {
+  font-weight: 500;
+  font-size: 18px;
+  background-color: #4158D0;
+  width: fit-content;
+  color: whitesmoke;
+  padding: 8px;
+  border-radius: 5px;
+  box-shadow: 0px 1px 1px gainsboro;
+}
+
+/*End of Posts and Announcement */
+
+/* Partnership */
+
+#partnership {
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  width: 960px;
+  padding: 120px 0px 80px 0px;
+  border-radius: 20px;
+  box-shadow: 0 1px 2px black;
+  margin-bottom: 50px;
+  margin-top: 70px;
+}
+@media screen and (max-width: 992px) {
+  #partnership {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 576px) {
+  #partnership {
+    height: fit-content;
+    width: fit-content;
+    margin: 0 10px 0 10px;
+    padding: 90px 0px 50px 0px;
+  }
+}
+#partnership p {
+  font-size: 16px;
+  font-weight: 400;
+}
+#partnership button  {
+  margin-top: 3vmin;
+  padding: 10px;
+  background-color: orange;
+  color: whitesmoke;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0px 1px 1px gainsboro;
+}
+
+/* End of Partnership */
+
+
+/* Footer */
+footer {
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  margin-top: 150px;
+}
+/* Logo in footer */
+footer .logoWhite {
+  width: 200px;
+}
+/* Kodego photo of achievement */
+footer #footerAchieve {
+  width: 200px;
+}
+footer h6{
+  font-size: 18px;
+  font-size: bolder;
+  color: #525050;
+}
+footer i {
+  font-size: 25px;
+  font-size: bolder;
+}
+footer p {
+  font-size: 16px;
+  font-weight: 500;
+}
+footer .paraFooter {
+  width: 300px;
+}
+@media screen and (max-width: 992px) {
+  footer .paraFooter {
+    width: fit-content;
+  }
+}
+footer .footFooter {
+  border-top: 1px solid rgb(144, 141, 141);
+}
+
+
+/* REGISTER PAGE */
+
+/* Register Banner */
+.Register .row {
+  height: 100vh;
+}
+#registerFirstColumn {
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+}
+#registerFirstColumn img {
+  width: 400px;
+}
+@media screen and (max-width:992px) {
+  #registerFirstColumn img {
+    width: 200px;
+  }
+}
+#registerFirstColumn a {
+  font-size: 30px;
+  color: whitesmoke;
+  font-weight: 500;
+  text-decoration: none;
+  border: 1px solid gainsboro;
+  padding: 10px;
+  border-radius: 50%;
+}
+#registerSecondColumn {
+  background-color: rgb(250, 247, 242);
+}
+.Register form {
+  /* border: 1px solid black; */
+  padding: 25px;
+  width: 400px;
+  background-color: white;
+  box-shadow: 0px 2px 2px gainsboro;
+}
+@media screen and (max-width:400px) {
+  .Register form {
+    width: 350px;
+  }
+}
+@media screen and (max-width:350px) {
+  .Register form {
+    width: 270px;
+  }
+  #registerFirstColumn img {
+    width: 150px;
+  }
+}
+.Register p, .Register label {
+  /* margin-bottom: 0px; */
+  font-size: 16px;
+  font-weight: 400;
+}
+.Register h1 {
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+.Register input {
+  box-shadow: 0px 2px 2px gainsboro;
+}
+.Register button {
+  font-size: 18px;
+  background-color: orange;
+  color: whitesmoke;
+  font-weight: bold;
+  border: none;
+  box-shadow: 0px 2px 2px gainsboro;
+}
+
+/* TEMPLATED WEBSITES */
+
+.templated {
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+}
+.templateBanner {
+  padding: 200px 0px 50px 0px;
+}
+@media screen and (max-width:948px){
+  .templateBanner {
+    padding: 300px 0px 50px 0px;
+  }
+}
+@media screen and (max-width:768px){
+  .templateBanner {
+    padding: 150px 0px 50px 0px;
+  }
+}
+.templateBanner img {
+  width: 400px;
+}
+@media screen and (max-width:410px){
+  .templateBanner img {
+    width: 300px;
+  }
+}
+.templateBanner h1 {
+  font-weight: bold;
+  width: 490px;
+}
+@media screen and (max-width:992px) {
+  .templateBanner h1 {
+    width: fit-content;
+  }
+}
+.templateBanner h6 {
+  font-weight: 500;
+  font-size: 16px;
+}
+.templateBanner button {
+  color: black;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 5px;
+  background-color: orange;
+  border: none;
+  box-shadow: 0px 2px 2px black;
+  margin-top: 20px;
+}
+.templatedOne{
+  margin-top: 70px;
+}
+.templatedOne h1 {
+  font-weight: bold;
+  font-size: 35px;
+}
+.templatedOne p {
+  font-weight: 500;
+  font-size: 16px;
+}
+.templatedOne h6 {
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+}
+.templatedOne .Column {
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  padding: 35px;
+  border-radius: 10px;
+}
+@media screen and (max-width: 576px) {
+  .templatedOne .Column {
+    width: 400px;
+  }
+}
+.templatedOneTagline{
+  width: 400px;
+}
+@media screen and (max-width: 410px) {
+  .templatedOne .Column {
+    width: 300px;
+  }
+  .templatedOneTagline{
+    width: 300px;
+  }
+}
+#templateImg{
+  width: 100px;
+  margin-bottom: 10px;
+}
+.overlayed {
+  top: 75%;
+}
+@media screen and (max-width:992px) {
+  .overlayed {
+    top: 90%;
+  }
+}
+
+
+/* FAQS */
+
+.faqs .accordion {
+  width: 700px;
+}
+.faqsHead {
+  font-size: 35px;
+  font-weight: bold;
+  margin-top: 80px;
+  margin-bottom: 20px;
+}
+.accordion-button {
+  font-size: 20px;
+}
+
+
+/* Project */
+.projectBanner {
+  padding: 30vmin 0 10vmin 0;
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+}
+@media screen and (max-width: 948px) {
+  .projectBanner {
+    padding: 50vmin 0 10vmin 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .projectBanner {
+    padding: 30vmin 0 10vmin 0;
+  }
+}
+@media screen and (max-width: 500px) {
+  .projectBanner {
+    padding: 35vmin 0 10vmin 0;
+  }
+}
+@media screen and (max-width: 400px) {
+  .projectBanner {
+    padding: 40vmin 0 10vmin 0;
+  }
+}
+.projectBanner h1 {
+  font-weight: bold;
+}
+.projectBanner p {
+  font-weight: 500;
+  font-size: 16px;
+}
+.projectBanner img{
+  width: 250px;
+}
+.projectx{
+  margin-top: 50px;
+}
+.projectx .container {
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0px 1px 1px gray;
+  width: 1000px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+@media screen and (max-width:992px) {
+  .projectx .container {
+    width: fit-content;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+@media screen and (max-width:576px) {
+  .projectx .container {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+.projectx h2 {
+  font-size: 35px;
+  font-weight: bold;
+  color: white;
+}
+.projectx p {
+  font-size: 16px;
+  font-weight: 500;
+  color: whitesmoke;
+}
+.projectx button {
+  font-size: 18px;
+  font-weight: bold;
+  background-color: orange;
+  border: none;
+  box-shadow: 1px 2px 1px gainsboro;
+  padding: 10px;
+  border-radius: 5px;
+  color: whitesmoke;
+}
+.projectx img {
+  border-radius: 5px;
+  box-shadow: 0px 1px 1px gainsboro;
+  width: 400px;
+  transition: 1s;
+}
+.projectx img:hover{
+  transform: scale(1.15);
+}
+@media screen and (max-width:500px) {
+  .projectx img {
+    width: 300px;
+  }
+}
+@media screen and (max-width:400px) {
+  .projectx img {
+    width: 250px;
+  }
+}
+#projectForm {
+  padding: 25px;
+  width: 700px;
+  background-color: white;
+  box-shadow: 0px 2px 2px gainsboro;
+  margin: 100px 0px 50px 0px;
+}
+@media screen and (max-width: 1250px) {
+  #projectForm {
+    width: 600px;
+  }
+}
+@media screen and (max-width: 1116px) {
+  #projectForm {
+    width: 500px;
+    margin: 150px 0px 50px 0px;
+  }
+}
+@media screen and (max-width: 992px) {
+  #projectForm {
+    width: 700px;
+    margin: 200px 0px 50px 0px;
+  }
+  #admin_project {
+    margin-top: 0px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #projectForm {
+    width: 600px;
+    margin: 100px 0px 50px 0px;
+  }
+}
+@media screen and (max-width: 650px) {
+  #projectForm {
+    width: 500px;
+    margin: 50px 0px 50px 0px;
+  }
+}
+@media screen and (max-width: 540px) {
+  #projectForm {
+    width: 400px;
+    margin: 50px 0px 50px 0px;
+  }
+}
+@media screen and (max-width: 440px) {
+  #projectForm {
+    width: 350px;
+    margin: 50px 0px 50px 0px;
+  }
+}
+#projectForm label {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+#projectForm button {
+  background-color: orange;
+  border: none;
+  box-shadow: 0px 2px 2px gainsboro;
+  font-size: 18px;
+  font-weight: bold;
+}
+#projectForm input, #projectForm textarea, #projectForm select {
+  box-shadow: 0px 2px 2px gainsboro;
+}
+
+/* Content */
+.content .contentImg {
+  margin-top: 15vmin;
+  height: 75vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+@media screen and (max-width: 948px) {
+  .content .contentImg {
+    margin-top: 30vmin;
+  }
+}
+@media screen and (max-width: 768px) {
+  .content .contentImg {
+    margin-top: 15vmin;
+  }
+}
+@media screen and (max-width: 500px) {
+  .content .contentImg {
+    margin-top: 15vmin;
+  }
+}
+@media screen and (max-width: 400px) {
+  .content .contentImg {
+    margin-top: 20vmin;
+  }
+}
+.content .contentHeader {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(187, 3, 249, 0.3);
+}
+.content .contentHeader h1{
+  font-weight: 800;
+  color: white;
+}
+.content .contentHeader h5{
+  font-weight: 600;
+  color: whitesmoke;
+}
+.content .contentHeader p{
+  font-weight: 500;
+  color: white;
+}
+.content button {
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 2px 2px gainsboro;
+}
+
+/* Contact */
+
+#formContact input {
+  width: 500px;
+  font-size: 18px;
+  padding:15px;
+  border-radius: 50px;
+  background-color: white;
+  border: none;
+  box-shadow: 0px 2px 2px gainsboro;
+  font-weight: bold;
+  transition: 0.5s;
+}
+#formContact input:focus {
+  background-color: rgb(244,248,251);
+  outline-color: orange;
+}
+#formContact{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  box-shadow: 2px 1px 2px 2px gainsboro;
+  margin-top: 70px;
+  width: 1100px;
+  border-radius: 10px;
+  background: rgb(244,248,251);
+}
+#formContact textarea {
+  width: 1000px;
+  transition: 0.5s;
+}
+#formContact textarea:focus {
+  background-color: rgb(244,248,251);
+  outline-color: orange;
+}
+#formContact textarea {
+  font-size: 18px;
+  padding:10px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0px 2px 2px gainsboro;
+  font-weight: bold;
+  border: none;
+}
+#formContact button {
+  padding:10px;
+  font-size: 20px;
+  font-weight: bold;
+  width: 1000px;
+  border-radius: 50px;
+  box-shadow: 0px 2px 2px gainsboro;
+  border: none;
+  background-color: orange;
+  color: white;
+}
+@media screen and (max-width:1200px){
+  #formContact{
+    width: 820px;
+  }
+  #formContact input {
+    width: 380px;
+  }
+  #formContact textarea, #formContact button{
+    width: 760px;
+  }
+}
+@media screen and (max-width:900px){
+  #formContact{
+    width: 750px;
+  }
+  #formContact input {
+    width: 300px;
+  }
+  #formContact textarea, #formContact button{
+    width: 600px;
+  }
+}
+@media screen and (max-width:768px){
+  #formContact{
+    width: fit-content;
+    margin-top: 50px;
+  }
+  #formContact input {
+    width: 600px;
+  }
+  #formContact button {
+    width: fit-content;
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width:720px){
+  #formContact input, #formContact textarea {
+    width: 500px;
+  }
+}
+@media screen and (max-width:630px){
+  #formContact{
+    padding: 20px;
+  }
+  #formContact input, #formContact textarea {
+    width: 400px;
+  }
+}
+@media screen and (max-width:480px){
+  #formContact{
+    padding: 10px;
+  }
+  #formContact input, #formContact textarea {
+    width: 350px;
+  }
+}
+@media screen and (max-width:390px){
+  #formContact{
+    padding: 10px;
+  }
+  #formContact input, #formContact textarea {
+    width: 300px;
+  }
+}
+/* Slider */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+.slider {
+  background: white;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+  height: 100px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 960px;
+}
+@media screen and (max-width: 1000px){
+  .slider{
+    width: 860px;
+  }
+}
+@media screen and (max-width: 900px){
+  .slider{
+    width: 760px;
+  }
+}
+@media screen and (max-width: 800px){
+  .slider{
+    width: 660px;
+  }
+}
+@media screen and (max-width: 700px){
+  .slider{
+    width: 560px;
+  }
+}
+@media screen and (max-width: 600px){
+  .slider{
+    width: 460px;
+  }
+}
+@media screen and (max-width: 600px){
+  .slider{
+    width: 460px;
+  }
+}
+@media screen and (max-width: 500px){
+  .slider{
+    width: 360px;
+  }
+}
+@media screen and (max-width: 400px){
+  .slider{
+    width: 300px;
+  }
+}
+.slider::before,
+.slider::after {
+  /* background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%); */
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+.slider::before {
+  left: 0;
+  top: 0;
+}
+.slider .slide-track {
+  animation: scroll 40s linear infinite;
+  display: flex;
+  width: calc(200px * 14);
+}
+.slider .slide {
+  height: 100px;
+  width: 250px;
+}
+
